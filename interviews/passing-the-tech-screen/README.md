@@ -3,6 +3,7 @@
 ## CSS
 
 1. What are CSS selectors?
+Just points to the element(s) you want to style. A selector has a property and a value.
 1. What is selector specificity?
 1. What is the difference between selectors `.class1.class2` and `.class1 .class2` (space added)?
 1. How about these selectors `.class1 .class2` and `.class1 > .class2`?
@@ -13,16 +14,22 @@
 1. ~~How do floats work?~~
 1. How do you get something to not display using CSS?
 1. Why would you use Flexbox or CSS Grid?
+Flexbox is either rows or columns. Grid is generally for both. 
 
 ## JavaScript
 
 1. Where can you use JS?
 1. What is NodeJS?
+Back-end Javascript built on Chrome's V8 engine.
 1. Does it have/use types?
+Yes. Node elements have a NodeType of 1, attribute is 2, text, is 3, comment is 8. 
 1. Name 2 or more ES6 features.
+Arrow functions, and classes - previously had to use prototypes. 
 1. What are `let` and `const`?
+Ways to define a variable. 
 1. What is `var`?
 1. How is `var` different than `const`?
+Const says it won't be reassigned and is es6. 
 1. What are anonymous functions?
 1. How do you define a global variable?
 1. How do you define a global variable inside of a function?
@@ -34,22 +41,28 @@
 1. What is the difference between `null` and `undefined`?
 1. What are the primitive data types?
 1. How does event bubbling work?
+If you clicked on a p that was nested inside a div that was inside a form, even if the click handler was on the p, it would bubble up to the form, then the div. 
 1. How do you avoid event bubbling?
-
+event.stopPropogation();
 ## React:
 
 1. What is one lifecycle hook that is in every class component?
+constructor
 1. Name as many lifecycle hooks as you can?
+componentDidMount, componentWillMount, render
     1. Bonus: Name the deprecated hooks.
 1. What is the difference between state and props?
+
 1. Can you set state more than once?
 1. How does React use the virtual DOM?
 1. What are the pros/cons w/ `css-in-js`?
 1. Why do we typically need to use babel?
 1. When would you use Redux and `this.setState({...})`?
+Redux is needing to restore a specific piece of state - like the selected value in a dropdown on a page. Otherwise, setState will do just fine. 
 1. What problem(s) does `Redux` solve?
+The problem of state transfer between components. One-way data flow. 
 1. What is the Context API?
-
+It passes data through the component tree without having to pass props down manually at every level. 
 ## Vue.JS:
 
 1. Name 2+ lifecycle methods?
