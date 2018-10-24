@@ -23,79 +23,79 @@ Flexbox is either rows or columns. Grid is generally for both.
 
 1. Where can you use JS?
 
-Mostly client side, but there is server-side JavaScript like Node. 
+_Mostly client side, but there is server-side JavaScript like Node._
 
 1. What is NodeJS?
 
-Back-end Javascript built on Chrome's V8 engine.
+_Back-end Javascript built on Chrome's V8 engine._
 
 1. Does it have/use types?
 
-Yes. Node elements have a NodeType of 1, attribute is 2, text, is 3, comment is 8. 
+_Yes. Node elements have a NodeType of 1, attribute is 2, text, is 3, comment is 8._ 
 
 1. Name 2 or more ES6 features.
 
-Arrow functions, and classes - previously had to use prototypes. 
+_Arrow functions, and classes - previously had to use prototypes._ 
 
 1. What are `let` and `const`?
 
-Ways to define a variable. 
+_ES6 Ways to define a variable. Let is scoped to the block, const means it's immutable._ 
 
 1. What is `var`?
 
-Declares a variable. 
+_Declares a variable._ 
 
 1. How is `var` different than `const`?
 
-Const says it won't be reassigned and is es6. 
+_Const says it won't be reassigned and is es6._ 
 
 1. What are anonymous functions?
 
-Functions that don't have a name. so instead of `function letterCount(){}` it would be `function (){}`.
+_Functions that don't have a name. so instead of `function letterCount(){}` it would be `function (){}`._
 
 1. How do you define a global variable?
 
-Just declare a variable outside of a function. 
+_Just declare a variable outside of a function._ 
 
 1. How do you define a global variable inside of a function?
 
-Docs aren't clear on this. You could use the window object and do `window.foo = 90;`. OR you could assign a value to a variable inside a function that hasn't been declared at all yet - so inside the function, instead of `var foo = 90;` you simply write `foo = 90;`. 
+_Docs aren't clear on this. You could use the window object and do `window.foo = 90;`. OR you could assign a value to a variable inside a function that hasn't been declared at all yet - so inside the function, instead of `var foo = 90;` you simply write `foo = 90;`._ 
 
 1. What does IIFE (pronounced iffy) mean?
 
-Immediately invoked function expression. It runs as soon as it's defined. 
+_Immediately invoked function expression. It runs as soon as it's defined._ 
 
 1. What is a higher order function?
 
-Functions that take functions as arguments or return functions. Functions that interate over arrays and return a modified version of it. 
+_Functions that take functions as arguments or return functions. Functions that interate over arrays and return a modified version of it._ 
 
 1. Why are functions in JavaScript 'first class'?
 
-Because they can have properties and methods just like any other object. 
+_Because they can have properties and methods just like any other object._ 
 
 1. What's a closure?
 
-An inner function that has access to the outer function's variables. It has access to its own scope, the outer function's scope, and the global scope. 
+_An inner function that has access to the outer function's variables. It has access to its own scope, the outer function's scope, and the global scope._ 
 
 1. What is the difference between `==` and `===`?
 
-Equals vs strict equals. `==` compares value, `===` compares value and type. So `2 == '2' == true`, but `2 === '2' = false`.
+_Equals vs strict equals. `==` compares value, `===` compares value and type. So `2 == '2' == true`, but `2 === '2' = false`._
 
 1. What is the difference between `null` and `undefined`?
 
-Undefined means a variable has been declared but not assigned a value. Null is an assignment. Also, null is an object. By the way, when you declare a variable like `var foo;` you aren't assigning it a value, but it does get initialized with `undefined`. 
+_Undefined means a variable has been declared but not assigned a value. Null is an assignment. Also, null is an object. By the way, when you declare a variable like `var foo;` you aren't assigning it a value, but it does get initialized with `undefined`._ 
 
 1. What are the primitive data types?
 
-Null, undefined, boolean, string, number. 
+_Null, undefined, boolean, string, number._ 
 
 1. How does event bubbling work?
 
-If you clicked on a p that was nested inside a div that was inside a form, even if the click handler was on the p, it would bubble up to the form, then the div. 
+_If you clicked on a p that was nested inside a div that was inside a form, even if the click handler was on the p, it would bubble up to the form, then the div._ 
 
 1. How do you avoid event bubbling?
 
-event.stopPropogation();
+_event.stopPropogation();_
 
 ## React:
 
