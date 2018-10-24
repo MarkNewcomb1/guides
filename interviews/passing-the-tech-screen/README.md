@@ -4,20 +4,43 @@
 
 1. What are CSS selectors?
 
-Just points to the element(s) you want to style. A selector has a property and a value.
+_Just points to the element(s) you want to style. A selector has a property and a value._
 
 1. What is selector specificity?
+
+_It decides which selector "wins" when there's conflicting css rules pointing to the same element. An html tag selector has a specificity of 1, a class has 10, an id has 100, and inline styling has 1,000._
+
 1. What is the difference between selectors `.class1.class2` and `.class1 .class2` (space added)?
+
+_The first one selects an element with both class1 and class2 on it. The second one is a descendant selector, which selects an element with a class of class2 that's inside an element with a class of class1._
+
 1. How about these selectors `.class1 .class2` and `.class1 > .class2`?
+
+_The first one is a descendant selector - selects an element of class2 that's inside class1, but the second one is a child selector, which only selects immediate children of it. Used a lot with uls and lis._
 1. And these selectors `.header .nav a` and `.header a`?
+
+_It's the same concept of descendant selectors, but the first one is three levels deep, and the second is only two._
+
 1. How do you center something in CSS?
+
+_The tried-and-true trick for me is `display: block; margin: 0 auto;`. For flexbox, though, on its parent container, you use `display: flex; align-items: center; justify-content: center;`.
+
 1. What is SASS/LESS/Stylus/etc?
+
+_SASS stands for Syntactically Awesome Stylesheets, and it's a language for stylesheets that's a preprocessor scripting language. It requires a compilier to "translate" SASS into CSS a browser can read, but it gives you additional functionality like storing variables, nesting selectors, etc._ 
+
 1. What is component based SCSS/CSS? 
+
+_It writes CSS rules in ES6 with `const` and backticks._
+
 1. ~~How do floats work?~~
 1. How do you get something to not display using CSS?
+
+_`display: none;`, although if you want it to still take up the space on the page as if it were visible, then `opacity: 0;`_
+
 1. Why would you use Flexbox or CSS Grid?
 
-Flexbox is either rows or columns. Grid is generally for both. 
+_Flexbox is either rows or columns. Grid is generally for both._ 
 
 ## JavaScript
 
@@ -63,7 +86,13 @@ _Docs aren't clear on this. You could use the window object and do `window.foo =
 
 1. What does IIFE (pronounced iffy) mean?
 
-_Immediately invoked function expression. It runs as soon as it's defined._ 
+_Immediately invoked function expression. It runs as soon as it's defined. Example:_
+```javascript 
+(function () {
+    statements
+})();
+```
+
 
 1. What is a higher order function?
 
