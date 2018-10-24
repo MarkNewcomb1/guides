@@ -23,7 +23,7 @@ _It's the same concept of descendant selectors, but the first one is three level
 
 1. How do you center something in CSS?
 
-_The tried-and-true trick for me is `display: block; margin: 0 auto;`. For flexbox, though, on its parent container, you use `display: flex; align-items: center; justify-content: center;`.
+_The tried-and-true trick for me is `display: block; margin: 0 auto;`. For flexbox, though, on its parent container, you use `display: flex; align-items: center; justify-content: center;`._
 
 1. What is SASS/LESS/Stylus/etc?
 
