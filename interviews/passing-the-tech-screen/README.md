@@ -50,8 +50,17 @@ Declares a variable.
 Const says it won't be reassigned and is es6. 
 
 1. What are anonymous functions?
+
+Functions that don't have a name. so instead of `function letterCount(){}` it would be `function (){}`.
+
 1. How do you define a global variable?
+
+Just declare a variable outside of a function. 
+
 1. How do you define a global variable inside of a function?
+
+Docs aren't clear on this. You could use the window object and do `window.foo = 90;`. OR you could assign a value to a variable inside a function that hasn't been declared at all yet - so inside the function, instead of `var foo = 90;` you simply write `foo = 90;`. 
+
 1. What does IIFE (pronounced iffy) mean?
 
 Immediately invoked function expression. It runs as soon as it's defined. 
@@ -69,9 +78,12 @@ Because they can have properties and methods just like any other object.
 An inner function that has access to the outer function's variables. It has access to its own scope, the outer function's scope, and the global scope. 
 
 1. What is the difference between `==` and `===`?
+
+Equals vs strict equals. `==` compares value, `===` compares value and type. So `2 == '2' == true`, but `2 === '2' = false`.
+
 1. What is the difference between `null` and `undefined`?
 
-Undefined means a variable has been declared but not assigned a value. Null is an assignment. Also, null is an object. 
+Undefined means a variable has been declared but not assigned a value. Null is an assignment. Also, null is an object. By the way, when you declare a variable like `var foo;` you aren't assigning it a value, but it does get initialized with `undefined`. 
 
 1. What are the primitive data types?
 
