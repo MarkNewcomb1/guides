@@ -139,6 +139,9 @@ componentDidMount, componentWillMount, render
 1. How does React use the virtual DOM?
 1. What are the pros/cons w/ `css-in-js`?
 1. Why do we typically need to use babel?
+
+_Babel's a JavaScript compilier. You need a way to translate React's JSX syntax into vanilla JavaScript to run in web browsers._
+
 1. When would you use Redux and `this.setState({...})`?
 Redux is needing to restore a specific piece of state - like the selected value in a dropdown on a page. Otherwise, setState will do just fine. 
 1. What problem(s) does `Redux` solve?
@@ -148,20 +151,100 @@ It passes data through the component tree without having to pass props down manu
 ## Vue.JS:
 
 1. Name 2+ lifecycle methods?
+
+_mounted, gives access to templates and enables interaction with the DOM. beforeUpdate, runs after data changes on the component and the update cycle begins right before the DOM is patches and re-rendered. Useful for debugging._
+
 1. Do components need templates?
+
+_No - you can create what's called a renderless component that only manages state and behavior._
+
 1. What is `v-bind:` for?
+
+_It's a directive which are like HTML attributes. For, say, the href attribute of an a tag, you have to use v-bind:_
+
+```
+<a v-bind:href="url">{{ linkText }}</a>
+```
+_It's so common that there's a shorthand for it:_
+
+
+```
+<a :href="url">{{ linkText }}</a>
+```
+
 1. How do you use props?
+
+_You have to register them in your component, and then you pass data to it as a custom attribute. It's a way to pass data to child components._
+
 1. What are watches for?
+
+_They're for executing logic that applies to something else when a change on a property occurs. So if you have an input type number that allows you to uptick and downtick a number in a box, that component's data can be 0 to begin with, but you can make a watch() function watch for the change to this number and do something else, like console.log "The counter has changed!"_
+
 1. What are computed methods?
+
+_I did not see computed method anywhere in the Vue docs. Computed properties, however, are cached based on their dependencies. If it's not a reactive dependency, then it won't ever update, like the following computed property:_
+
+```javascript
+computed: {
+  now: function () {
+    return Date.now()
+  }
+}
+```
 1. Why/when should data be a function?
+
+_The official docs state that a component's data option MUST be a function, so that each instance can maintain their independent copy of the return data object. Here's an example of one:_
+
+```javascript
+data: function () {
+  return {
+    count: 0
+  }
+}
+```
+
 1. What is `v-model`? What does it affect?
+
+_Like v-bind, it's also a directive. But v-model is two-way data binding. So on a form, you can bind the input element and have that change some Vue data property elsewhere:_
+
+```
+<input v-model="message" placeholder="Enter a message">
+<p>Message is: {{ message }}</p>
+```
+
+
 1. How do you deploy/use `.vue` files?
 1. How do you prevent default with an `v-on:click`/`@click=`?
+
+_Vue has event modifiers for this for v-on. For a form:_
+
+```
+<!-- the submit event will no longer reload the page -->
+<form v-on:submit.prevent="onSubmit"></form>
+```
+
+_For v-on:click_
+
+```
+v-on:click.prevent.self will prevent all clicks while v-on:click.self.prevent will only prevent clicks on the element itself.
+```
+
 1. Where should a component's logic/functions live?
+
+_Inside the script tag; specifically, the method object._
+
+
 1. What is reactivity in Vue?
+
+_It's how Vue tracks changes in ways that procedural JavaScript does not. When you pass an object to Vue as its data option, Vue will walk through the properties and convert them to getters and setters using Object.defineProperty._
+
 1. Describe Vuex & and it's use case(s).
+
+_If you need the same data at two completely different places in your application. Or to persist state, like an application to still work even if the user is offline. If you have a to-do app, for example, and you want to fetch all the items from an API on one page but also have pages to display only certain categories of to-do items. Those are two places in the app that need to look at the same chunk of data._
+
 1. How is it similar to React? Different?
 
+_It's a front-end framework that's gotten popular recently, with it's seperation of concerns. However, with Vue (and also Angular which it came from) you get directives like v-for (from ngFor), whereas React uses .map instead._
 
 ---------------
 
